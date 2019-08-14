@@ -11,6 +11,12 @@ This app makes use of the following engines:
 * ember-chat-engine - an example of a route-less engine that is an in-repo
   addon.
 
+## /etc/hosts
+
+You need to add the following line to your `/etc/hosts` file:
+
+`127.0.0.1 myengines.com`
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.

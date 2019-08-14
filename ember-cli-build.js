@@ -1,8 +1,15 @@
 /* eslint-env node */
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
+let fingerprintOptions = {
+  enabled: true,
+  extensions: ['js', 'css', 'png', 'jpg', 'gif', 'svg', 'eot', 'woff', 'ttf'],
+  prepend: '//myengines.com:4200/'
+};
+
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    fingerprint: fingerprintOptions
     // Add options here
   });
 
