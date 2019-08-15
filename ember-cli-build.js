@@ -9,8 +9,13 @@ let fingerprintOptions = {
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    fingerprint: fingerprintOptions
-    // Add options here
+    fingerprint: fingerprintOptions,
+
+    assetLoader: {
+      generateURI(filePath) {
+        return `//myengines.com:4200/${filePath}`;
+      }
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
